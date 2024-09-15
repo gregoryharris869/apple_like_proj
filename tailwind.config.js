@@ -9,13 +9,7 @@ export default {
       white: "#fff",
     },
     fontFamily: {
-      sans: [
-        "SF Pro Display",
-        "Helvetica Neue",
-        "Helvetica",
-        "Arial",
-        "sans-serif",
-      ],
+      sans: ["Inter", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
     },
     fontSize: {
       xs: "0.75rem", // 12px
