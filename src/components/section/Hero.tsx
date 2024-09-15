@@ -2,7 +2,7 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
 import Button from "../Button";
-import { Container } from "../Container";
+import Container from "../Container";
 
 export const Hero = () => {
   const videoContainerRef = useRef<HTMLDivElement>(null);
@@ -20,7 +20,7 @@ export const Hero = () => {
         className="absolute -top-[--header-height] left-0 h-[200vh] w-full"
       >
         <img
-          className="sticky top-0 object-cover w-full h-screen"
+          className="sticky top-0 object-cover w-full h-screen opacity-[.999]"
           src="/public/posters/napoleon.webp"
         />
       </motion.div>
