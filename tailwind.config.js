@@ -6,7 +6,9 @@ export default {
       background: "#000",
       backgroundContrast: "#111",
       textBlack: "#1d1d1f",
+      textGrey: "hsl(240, 3%, 64%)",
       white: "#fff",
+      linkColor: "#0070f3",
     },
     fontFamily: {
       sans: ["Inter", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
