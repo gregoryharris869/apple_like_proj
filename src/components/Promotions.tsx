@@ -9,7 +9,7 @@ const Promotions = ({ promotions }: Props) => {
     <>
       {promotions.map(
         ({ title, price, description, buttonPromotion }, index) => (
-          <div className="space-y-9">
+          <div className="space-y-9" key={index}>
             <div
               key={index}
               className="flex flex-col justify-between h-full space-y-4"

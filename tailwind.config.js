@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
@@ -14,17 +15,53 @@ export default {
       sans: ["Inter", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
     },
     fontSize: {
-      xs: "0.75rem", // 12px
-      sm: "0.875rem", // 14px
-      base: "1.0625rem", // 17px
-      lg: ["1.1875rem", "1.21"], // 19px
-      xl: "1.3125rem", // 21px
-      "2xl": "1.5rem", // 24px
-      "3xl": "1.75rem", // 28px
-      "4xl": ["2.5rem", "1.1"], // 40px
-      "5xl": ["4.5rem", "1.05"], // 72px
+      xs: "0.75rem",
+      sm: "0.875rem",
+      base: "1.0625rem",
+      lg: ["1.1875rem", "1.21"],
+      xl: "1.3125rem",
+      "2xl": "1.5rem",
+      "3xl": "1.75rem",
+      "4xl": ["2.5rem", "1.1"],
+      "5xl": ["4.5rem", "1.05"],
     },
-    extend: {},
+    keyframes: {
+      "carousel-move": {
+        "0%": {
+          transform: "translateX(0)",
+        },
+        "100%": {
+          transform: "translateX(-100%)",
+        },
+      },
+    },
+    animation: {
+      "carousel-move": "carousel-move var(--duration,80s) infinite",
+    },
+    extend: {
+      keyframes: {
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };

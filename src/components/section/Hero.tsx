@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Button from "../Button";
 import Container from "../Container";
 
-export const Hero = () => {
+const Hero = () => {
   const videoContainerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: videoContainerRef,
@@ -49,3 +49,5 @@ export const Hero = () => {
     </div>
   );
 };
+
+export default Hero;
